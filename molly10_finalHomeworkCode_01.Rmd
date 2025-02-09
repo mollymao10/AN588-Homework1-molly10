@@ -1,0 +1,125 @@
+---
+title: "molly10_finalHomeworkCode_01"
+author: "Yinuo Mao"
+date: "2025-02-07"
+output: html_document
+---
+
+```{r}
+library(tidyverse) # includes stringr)
+```
+
+##Challenge 1
+
+```{r}
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+# Remove punctuation
+Ulysses_sentence <- gsub("[[:punct:]]", "", sentence)
+
+# Split into a vector of words
+words_vector <- unlist(str_split(Ulysses_sentence, "\\s+"))
+
+# Extract every third word
+third_words <- words_vector[seq(3, length(words_vector), by = 3)]
+
+# Display the result
+third_words
+```
+```
+
+##Challenge 2
+
+```{r}
+# Given a matrix m
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+
+# Select 2nd, 3rd, and 6th columns
+a <- m[,c(2, 3, 6)]
+
+# Print
+print(a)
+
+# Select 6th to 8th rows
+b <- m[6:8, ]
+
+# Print b
+print(b)
+
+# Select elements from row 2, column 2 to row 6, column 9
+c <- m[2:6, 2:9]
+
+# Print c
+print(c)
+```
+
+##Challenge 3
+
+```{r}
+# Create a 4-dimensional, 400-element array
+a <- array(400:1, dim = c(5, 5, 4, 4))
+
+# Display the outcomes
+a[1, 1, 1, 2]
+
+a[2, 3, 2, ]
+
+a[1:5, 1:5, 3, 3]
+
+# Print
+print(a)
+```
+
+##Challenge 4
+
+```{r}
+## Lemuroidea
+Lemuroidea <- c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+
+## Lorisoidea
+Lorisoidea <- c("Lorisidae", "Galagidae")
+
+#### The Strepsirhini group (Lemuroidea and Lorisoidea)
+Strepsirhini <- list(Lemuroidea = Lemuroidea, Lorisoidea = Lorisoidea)
+
+## Tarsioidea
+Tarsioidea <- c("Tarsiidae")
+
+# The Catarrhini group (Hylobatidae, Hominidae, and Cercopithecidae)
+Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
+
+# The Platyrrhini group
+Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
+
+## The Anthropoidea group
+Anthropoidea <- list(Platyrrhini = Platyrrhini, Catarrhini = Catarrhini)
+
+### The Haplorhini group
+Haplorhini <- list(Anthropoidea = Anthropoidea, Tarsioidea = Tarsioidea)
+
+#### Combine Haplorhini and Strepsirhini into the Primates group
+Primates <- list(Haplorhini = Haplorhini, Strepsirhini = Strepsirhini)
+
+# Print the list
+Primates
+```
+
+##Challenge 5
+
+```{r}
+# make a matrix, stored by rows
+m3 <- matrix(c(3, 0, 1, 23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow = TRUE)
+
+# Coerce the matrix to a data frame
+df <- as.data.frame(m3)
+
+# Coerce the second column to be logical-valued
+df[[2]] <- as.logical(df[[2]])
+
+# Coerce the third column to be factor-valued
+df[[3]] <- as.factor(df[[3]])
+
+# Display the structure of the dataframe
+str(df)
+```
+
