@@ -1,0 +1,126 @@
+---
+title: "molly10_OriginalHomeworkCode_01"
+author: "Yinuo Mao"
+date: "2025-01-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(tidyverse) # includes stringr)
+```
+
+
+##Challenge 1
+
+```{r}
+library(stringr)
+
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+str_split(sentence, " ")
+
+word_vector <- unlist(str_split(sentence, " "))
+
+third_words <- word_vector[seq(1, length(word_vector), by = 3)]
+
+print(third_words)
+```
+
+##Challenge 2
+
+```{r}
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+print(m)
+
+x1 <- m[,c(2, 3, 6)]
+print(x1)
+x2 <- m[6:8, ]
+print(x2)
+x3 <- m[2:6, 2:9]
+print(x3)
+```
+
+##Challenge 3
+
+```{r}
+a <- array(data = 400:1, dim = c(5, 5, 4, 4))
+
+x4 <- a[1, 1, 1, 2]
+print(x4)
+x5 <- a[2, 3, 2, ]
+print(x5)
+x6 <- a[1:5, 1:5, 3, 3]
+print(x6)
+```
+
+##Challenge 4
+
+```{r}
+primate_taxonomy <- list(
+  Primates = list(
+    Haplorhini = list(
+      Anthropoidea = list(
+        Platyrrhini = list(
+          Cebidae = list(),
+          Atelidae = list(),
+          Pitheciidae = list()
+        ),
+        Catarrhini = list(
+          Cercopithecidae = list(),
+          Hylobatidae = list(),
+          Hominidae = list()
+        )
+      ),
+      Tarsioidea = list(
+        Tarsiidae = list()
+      )
+    ),
+    Strepsirhini = list(
+      Lorisoidea = list(
+        Lorisidae = list(),
+        Galagidae = list()
+      ),
+      Lemuroidea = list(
+        Cheirogaleidae = list(),
+        Lepilemuridae = list(),
+        Indriidae = list(),
+        Lemuridae = list(),
+        Daubentoniidae = list()
+      )
+    )
+  )
+)
+print(primate_taxonomy)
+```
+
+##Challenge 5
+
+```{r}
+m3 <- matrix(c(3, 0, 1,
+               23, 1, 2,
+               33, 1, 1,
+               42, 0, 1,
+               41, 0, 2),
+             nrow = 5,
+             ncol = 3,
+             byrow = TRUE)
+
+
+df3 <- as.data.frame(m3)
+print(df3)
+df3[, 2] <- as.logical(df3[, 2])
+df3[, 3] <- as.factor(df3[, 3])
+
+str(df3)
+
+```
