@@ -118,16 +118,16 @@ df3[, 3] <- as.factor(df3[, 3])
 str(df3)
 ```
 
-###Challenges:
-#1. The biggest challenge I faced is that I am not familiar with coding and format, so I spent much time on study R and try to figure out how to solve problem. However, the cheatsheet is useful and google is a perfect self-learning tool.
+##Challenges:
+1. The biggest challenge I faced is that I am not familiar with coding and format, so I spent much time on study R and try to figure out how to solve problem. However, the cheatsheet is useful and google is a perfect self-learning tool.
 
-#2. When I want to run the script to see whether it is right or wrong, I am not sure should I run all the chunks or the part I just wrote, or click the knit.
+2. When I want to run the script to see whether it is right or wrong, I am not sure should I run all the chunks or the part I just wrote, or click the knit.
 
-#3. I am quiet comfused about Challenge 4. I feel like I am ok with the chagenllges about digit number, but this one I am confused what the prompt expected me to do.
+3. I am quiet comfused about Challenge 4. I feel like I am ok with the chagenllges about digit number, but this one I am confused what the prompt expected me to do.
 
-#4. Do we necessarily need to go with the print() step?
+4. Do we necessarily need to go with the print() step?
 
-#5. I have really hard time with cloning from github webpage to the destbook, and creating the same document in R, also don't know how to push my code to the github. I tried to delelte all things and start from the beginning a few times. Now I am nearly understand how to operate these things through practice.
+5. I have really hard time with cloning from github webpage to the destbook, and creating the same document in R, also don't know how to push my code to the github. I tried to delelte all things and start from the beginning a few times. Now I am nearly understand how to operate these things through practice.
 
 ##Final comments
 I think overall you did a good job! Really, outside of the few things I mentioned (i.e. difference of interpretation of prompts and utilizing characters in challenge 4), that this was really well done. I think one thing you can definetly improve overall is just making small comments on your code while you do it. It would be helpful for me as an outsider to your mind to see what your thought process was in some areas. But again, really cool overall!
