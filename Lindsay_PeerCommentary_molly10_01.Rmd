@@ -76,23 +76,32 @@ primate_taxonomy <- list(
           Cebidae = list(),
           Atelidae = list(),
           Pitheciidae = list()
+        ),
         Catarrhini = list(
           Cercopithecidae = list(),
           Hylobatidae = list(),
           Hominidae = list()
+        )
+      ),
       Tarsioidea = list(
         Tarsiidae = list()
+      )
+    ),
     Strepsirhini = list(
       Lorisoidea = list(
         Lorisidae = list(),
         Galagidae = list()
+      ),
       Lemuroidea = list(
         Cheirogaleidae = list(),
         Lepilemuridae = list(),
         Indriidae = list(),
         Lemuridae = list(),
         Daubentoniidae = list()
-
+      )
+    )
+  )
+)
 print(primate_taxonomy)
 ```
 
